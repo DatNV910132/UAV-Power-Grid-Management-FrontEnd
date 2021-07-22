@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="5dp"
+tools:context=".ui.fragment.user.AddUserFragment">
+
+<TextView
+    android:id="@+id/tv1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:text="Thêm thông tin người dùng"
+    android:textAlignment="center"
+    android:textColor="#000000"
+    android:textSize="20dp" />
+
+<LinearLayout
+    android:id="@+id/llusername"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv1"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tài khoản:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Tài khoản người dùng"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/llpass"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/llusername"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mật khẩu:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Mật khẩu người dùng"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/llrole"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/llpass"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chức vụ:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <Spinner
+        android:id="@+id/sp_adduser_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/llrole"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Họ và tên người dùng"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll1"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giới tính:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Giới tính của người dùng"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll2"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày sinh:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Ngày sinh của người dùng"
+        android:inputType="date"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll3"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số Căn cước:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_nationid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Số căn cước của người dùng"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll4"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Địa chỉ của người dùng"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll5"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="SĐT của người dùng"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ll7"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll6"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <EditText
+        android:id="@+id/edt_adduser_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:hint="Email của người dùng"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+</LinearLayout>
+
+<TextView
+    android:id="@+id/tv_adduser_status"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll7"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:textColor="#FF0000"
+    android:textSize="10dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv_adduser_status"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_adduser_save"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_btn"
+        android:text="Lưu"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/btn_adduser_cancel"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="70dp"
+        android:background="@drawable/round_btn"
+        android:text="Hủy"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="17dp" />
+</LinearLayout>
+
+</RelativeLayout>

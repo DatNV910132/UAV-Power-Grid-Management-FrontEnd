@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.dataflight.AddPhotoFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Thêm Ảnh vào Hệ thống"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiêu đề:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addphoto_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:hint="Tiêu đề của bức ảnh"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại dữ liệu:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_addphoto_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày tạo:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addphoto_datecreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:hint="dd-mm-yyyy"
+            android:inputType="date"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày thêm:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addphoto_dateimport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:hint="dd-mm-yyyy"
+            android:inputType="date"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addphoto_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:hint="Mô tả về bức ảnh"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cột điện:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_addphoto_idpole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drone:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_addphoto_iddrone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn loại ảnh:"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_addphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_addphoto_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="true"
+            android:text="Toàn bộ"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/rb_addphoto_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:checked="false"
+            android:text="Từng phần"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imv_addphoto_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btn_addphoto_choosefile"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_btn"
+        android:text="Chọn file"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/tv_addphoto_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#FF0000"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_addphoto_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_btn"
+            android:text="Lưu"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_addphoto_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_btn"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+</LinearLayout>

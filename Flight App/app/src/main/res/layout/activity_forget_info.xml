@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".ui.activity.login.LoginSystemActivity"
+    >
+
+    <TextView
+        android:id="@+id/forget_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Quên tài khoản / mật khẩu ?"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        />
+    <ImageView
+        android:id="@+id/elec"
+        android:layout_below="@id/forget_info"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:src="@drawable/elec"
+        android:paddingBottom="30dp"
+        />
+    <LinearLayout
+        android:layout_below="@id/elec"
+        android:id="@+id/sys_forget_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại:"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/edt_forget_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số điện thoại"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:inputType="phone"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/sys_forget_linear2"
+        android:layout_below="@id/sys_forget_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập Email:"
+            android:textSize="20dp"
+            android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/edt_forget_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập Email đăng ký"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_st_forget_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sys_forget_linear2"
+        android:textSize="13dp"
+        android:textColor="#FF0000"
+        />
+    <Button
+        android:id="@+id/btn_forget_info"
+        android:layout_below="@id/tv_st_forget_info"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lấy lại thông tin"
+        style="@style/button_style"
+        />
+</RelativeLayout>

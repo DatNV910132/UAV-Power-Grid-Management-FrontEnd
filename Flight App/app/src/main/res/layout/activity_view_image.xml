@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.incident.ViewImageActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kiểm tra phát hiện sự cố"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/view_image_checkinci"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"/>
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/btn_viewimage_addinci"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_btn"
+        android:text="Phát hiện sự cố"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="18dp" />
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_viewimage_gohome"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_btn"
+        android:text="Trở về"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="18dp" />
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.dji.WaypointMissionActivity">
+
+    <TextView
+        android:id="@+id/tv_wpm1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Thiết lập hành trình bay"
+        android:textColor="#000000"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/tv_wpm_fc_info"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/tv_wpm1"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_wpm_mission_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_wpm_fc_info"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/ll_wpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_wpm_mission_info"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Chọn hành trình:"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_wpm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textCollor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wpm1"
+        android:layout_below="@id/ll_wpm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết:"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_wpm_viewmap"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="180dp"
+            style="@style/button_style"
+            android:textSize="15dp"
+            android:text="Bản đồ" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scv_wpm"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@id/ll_wpm1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_itemwpm_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mô tả:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tốc độ:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_maxspeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Tốc độ tối đa:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_gotofirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Đến điểm đầu:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_lostRCS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Mất kết nối:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_finishaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kết thúc:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_itemwpm_flightpathmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Đường bay 2 điểm:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/tv_itemwpm_repeattimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Số lần bay:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/tv_itemwpm_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Số điểm bay:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_wpm_simulator"
+        style="@style/common_button"
+        android:layout_below="@id/scv_wpm"
+        android:layout_toLeftOf="@id/btn_wpm_set_maximum_altitude"
+        android:text="Start Simulator" />
+
+    <Button
+        android:id="@+id/btn_wpm_set_maximum_altitude"
+        style="@style/common_button"
+        android:layout_below="@id/scv_wpm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Set Max Altitude" />
+
+    <Button
+        android:id="@+id/btn_wpm_set_maximum_radius"
+        style="@style/common_button"
+        android:layout_below="@id/scv_wpm"
+        android:layout_toRightOf="@id/btn_wpm_set_maximum_altitude"
+        android:text="Set Max Radius" />
+
+    <Button
+        android:id="@+id/btn_wpm_load"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_simulator"
+        android:layout_toLeftOf="@id/btn_wpm_upload"
+        android:text="Load" />
+
+    <Button
+        android:id="@+id/btn_wpm_upload"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_simulator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Upload" />
+
+    <Button
+        android:id="@+id/btn_wpm_start"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_simulator"
+        android:layout_toRightOf="@+id/btn_wpm_upload"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/btn_wpm_pause"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_load"
+        android:layout_toLeftOf="@+id/btn_wpm_resume"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/btn_wpm_resume"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_load"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Resume" />
+
+
+    <Button
+        android:id="@+id/btn_wpm_stop"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_load"
+        android:layout_toRightOf="@+id/btn_wpm_resume"
+        android:text="Stop" />
+
+
+    <Button
+        android:id="@+id/btn_wpm_download"
+        style="@style/common_button"
+        android:layout_below="@id/btn_wpm_pause"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Download" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_wpm_mission"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_wpm_download"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:max="100"
+        android:progress="0"
+        android:visibility="invisible" />
+</RelativeLayout>

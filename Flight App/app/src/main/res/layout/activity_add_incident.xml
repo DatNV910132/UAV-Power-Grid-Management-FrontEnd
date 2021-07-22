@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".ui.activity.incident.AddIncidentActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Thêm mới sự cố"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photoview_addinci_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sự cố:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addinci_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Nhập tên của sự cố"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả sự cố:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addinci_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Mô tả về sự cố"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày tháng:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addinci_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="DD-MM-YYYY"
+            android:inputType="date"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Độ nghiêm trọng:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_addinci_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:hint="Độ nghiêm trọng ( 1 - 4 )"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Người sửa:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_addinci_idfix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_addinci_addstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="10dp"
+        android:textColor="#FF0000"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_addinci_save"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/round_btn"
+            android:text="Lưu"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/btn_addinci_cancel"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/round_btn"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

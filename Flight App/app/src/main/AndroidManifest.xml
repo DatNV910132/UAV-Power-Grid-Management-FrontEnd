@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dji.sdk.sample">
+    <!-- SDK permission requirement -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.accessory"
+        android:required="true" />
+
+    <application
+        android:name=".internal.controller.DJISampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/sample_app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".ui.activity.mission.TemplatePoleMissionDetailActivity"></activity>
+        <activity android:name=".ui.activity.mission.PAPMissionDetailActivity" />
+        <activity android:name=".ui.activity.mission.MissionDetailActivity" />
+
+        <service
+            android:name=".service.NotificationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.activity.dji.ListFeaturesActivity" />
+        <activity
+            android:name=".ui.activity.PilotStartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activity.incident.DetailInciActivity" />
+        <activity android:name=".ui.activity.incident.AddIncidentActivity" />
+        <activity android:name=".ui.activity.incident.ViewImageActivity" />
+        <activity android:name=".ui.activity.incident.ViewListImageInciActivity" />
+        <activity android:name=".ui.activity.electricpole.Edit_EP_Activity" />
+        <activity
+            android:name=".ui.activity.dji.MediaViewActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".ui.activity.dji.WaypointMissionActivity" />
+        <activity android:name=".ui.activity.user.UserEditActivity" />
+        <activity android:name=".ui.activity.login.ForgetInfoActivity" />
+        <activity
+            android:name=".ui.activity.StartAppActivity"
+            android:label="@string/title_activity_start_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.dji.LiveStreamActivity"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".ui.activity.dji.ConnectDroneActivity" />
+        <activity android:name=".ui.activity.login.LoginSystemActivity" />
+        <activity android:name=".internal.controller.MainActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <!--
+            ADD API_KEY HERE and make sure you
+            are connected to the Internet before
+            the app is launched
+        -->
+        <meta-data
+            android:name="com.dji.sdk.API_KEY"
+            android:value="18591b2d24fcd9296de38870" />
+        <!--
+ Required for receiving accessory attachment events.
+            This is necessary for product when connecting over USB.
+        -->
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/sample_app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notification"
+            android:title="Thông báo" />
+        <item
+            android:id="@+id/connectDroneActivity"
+            android:icon="@drawable/ic_connect"
+            android:title="@string/menu_connect" />
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/ic_user"
+            android:title="@string/menu_user" />
+        <item
+            android:id="@+id/userManaFragment"
+            android:icon="@drawable/ic_user"
+            android:title="Quản trị người dùng" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_drone"
+            android:title="@string/menu_tools" />
+        <item
+            android:id="@+id/nav_cotdien"
+            android:icon="@drawable/ic_cotdien"
+            android:title="Lưới điện / Cột điện" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_baocao"
+            android:title="Báo cáo" />
+        <item
+            android:id="@+id/nav_MissionManager"
+            android:icon="@drawable/waypoint"
+            android:title="Quản lý hành trình" />
+        <item
+            android:id="@+id/nav_data_flight_mana"
+            android:icon="@drawable/ic_drone"
+            android:title="Quản lý dữ liệu bay" />
+    </group>
+
+    <item android:title="Sự cố">
+        <menu>
+            <item
+                android:id="@+id/nav_auto_check_inci"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Phát hiện sự cố tự động" />
+            <item
+                android:id="@+id/listConfirmInciFragment"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Phê duyệt sự cố tự động" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_incident" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_check_incident" />
+        </menu>
+    </item>
+
+
+
+</menu>

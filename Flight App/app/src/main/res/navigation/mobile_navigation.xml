@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.dji.sdk.sample.ui.fragment.HomeFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.dji.sdk.sample.ui.fragment.drone.DroneFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_drone" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.dji.sdk.sample.ui.fragment.incident.IncidentFragment"
+        android:label="@string/menu_incident"
+        tools:layout="@layout/fragment_incident" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.dji.sdk.sample.ui.fragment.incident.CheckInciFragment"
+        android:label="@string/menu_check_incident"
+        tools:layout="@layout/fragment_check_incident" />
+    <activity
+        android:id="@+id/connectDroneActivity"
+        android:name="com.dji.sdk.sample.ui.activity.dji.ConnectDroneActivity"
+        android:label="activity_connect_drone"
+        tools:layout="@layout/activity_connect_drone" />
+    <fragment
+        android:id="@+id/nav_cotdien"
+        android:name="com.dji.sdk.sample.ui.fragment.electricpole.CotDienFragment"
+        android:label="Lưới điện / cột điện"
+        tools:layout="@layout/fragment_elecpole" />
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.dji.sdk.sample.ui.fragment.report.ReportFragment"
+        android:label="Báo cáo"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/nav_user"
+        android:name="com.dji.sdk.sample.ui.fragment.user.UserFragment"
+        android:label="Thông tin người dùng"
+        tools:layout="@layout/fragment_user_login" />
+    <fragment
+        android:id="@+id/userManaFragment"
+        android:name="com.dji.sdk.sample.ui.fragment.user.UserManaFragment"
+        android:label="Quản trị người dùng"
+        tools:layout="@layout/fragment_user_mana" />
+    <fragment
+        android:id="@+id/nav_auto_check_inci"
+        android:name="com.dji.sdk.sample.ui.fragment.incident.AutoCheckInciFragment"
+        android:label="Phát hiện sự cố tự động"
+        tools:layout="@layout/fragment_auto_check_inci" />
+    <fragment
+        android:id="@+id/nav_data_flight_mana"
+        android:name="com.dji.sdk.sample.ui.fragment.dataflight.DataFlightManaFragment"
+        android:label="Quản lý dữ liệu bay"
+        tools:layout="@layout/fragment_data_flight_mana" />
+    <fragment
+        android:id="@+id/listConfirmInciFragment"
+        android:name="com.dji.sdk.sample.ui.fragment.incident.ListConfirmInciFragment"
+        android:label="Phê duyệt sự cố tự động"
+        tools:layout="@layout/fragment_listconfirm_inci" />
+    <fragment
+        android:id="@+id/nav_MissionManager"
+        android:name="com.dji.sdk.sample.ui.fragment.mission.MissionManagerFragment"
+        android:label="Quản lý hành trình"
+        tools:layout="@layout/fragment_mission_manager" />
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.dji.sdk.sample.ui.fragment.NotificationFragment"
+        android:label="Thông báo"
+        tools:layout="@layout/fragment_notification" />
+</navigation>

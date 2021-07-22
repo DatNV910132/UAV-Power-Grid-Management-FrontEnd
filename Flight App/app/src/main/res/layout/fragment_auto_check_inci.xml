@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.fragment.incident.AutoCheckInciFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phát hiện sự cố tự động"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_autocheckinci"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_btn"
+        android:text="Bắt đầu"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="15dp" />
+
+</LinearLayout>

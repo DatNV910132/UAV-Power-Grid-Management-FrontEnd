@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.activity.HomeActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Quản lý sự cố lưới điện"
+    android:textAlignment="center"
+    android:textColor="#000000"
+    android:textSize="23dp"
+    android:layout_marginBottom="50dp"
+    android:gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:src="@drawable/elec"
+        android:paddingBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/tv_status_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vui lòng đợi trong giây lát để chuẩn bị cấu hình"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_start_app"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_btn"
+        android:text="Bắt đầu"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="15dp" />
+    <Button
+        android:id="@+id/btn_start_logout"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_btn"
+        android:text="Đăng xuất"
+        android:textAllCaps="false"
+        android:textColor="@color/common_text_color"
+        android:textSize="15dp" />
+</LinearLayout>

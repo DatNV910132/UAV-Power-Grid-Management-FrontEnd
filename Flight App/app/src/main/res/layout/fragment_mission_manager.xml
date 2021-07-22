@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.fragment.mission.MissionManagerFragment">
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/vien"
+        >
+        <ImageButton
+            android:id="@+id/img_btn_mision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/waypointmap"
+            />
+        <TextView
+            android:id="@+id/tv_btn_mission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hành trình bay"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/vien"
+        >
+        <ImageButton
+            android:id="@+id/img_btn_papmision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/electricpole"
+            />
+        <TextView
+            android:id="@+id/tv_btn_papmission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hành trình theo cột điện"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/vien">
+        <ImageButton
+            android:id="@+id/img_btn_temppolemision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/template"
+            />
+        <TextView
+            android:id="@+id/tv_btn_temppolemission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hành trình bay"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

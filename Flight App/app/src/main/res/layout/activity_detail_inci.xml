@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.activity.incident.DetailInciActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Chi tiết sự cố"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/pv_detailinci_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sự cố:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="false"
+            android:hint="Nhập tên của sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="false"
+            android:hint="Nhập mô tả của sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày PH:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="false"
+            android:hint="Ngày PH sự cố (DD-MM-YYYY)"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_detailinci_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Mức độ:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_level"
+            android:enabled="false"
+            android:hint="Mức độ của sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_detailinci_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_level"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_detailinci_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Trạng thái:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_status"
+            android:enabled="false"
+            android:hint="Trạng thái của sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_detailinci_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_status"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cột điện:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_idpole"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:hint="Cột điện xảy ra sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_detailinci_map"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_btn"
+            android:text="Map"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Người PH:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_iddetect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:enabled="false"
+            android:hint="Người PH sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_detailinci_idfixer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Người sửa:"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/edt_detailinci_idfixer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_idfixer"
+            android:enabled="false"
+            android:hint="Người sửa chữa sự cố"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+
+        <Spinner
+            android:id="@+id/sp_detailinci_idfixer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_detailinci_idfixer"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_detailinci_done"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/round_btn"
+            android:text="Xong"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_detailinci_edit"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/round_btn"
+            android:text="Sửa"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/btn_detailinci_save"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:background="@drawable/round_btn"
+            android:text="Lưu"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_detailinci_cancel"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/round_btn"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

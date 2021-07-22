@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.dji.LiveStreamActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            >
+            <Button
+                android:id="@+id/btn_start_live_show1"
+                style="@style/common_button"
+                android:text="Start Live Show" />
+
+            <Button
+                android:id="@+id/btn_enable_video_encode1"
+                style="@style/common_button"
+                android:text="Enable Video Encode" />
+
+            <Button
+                android:id="@+id/btn_disable_video_encode1"
+                style="@style/common_button"
+                android:text="Disable Video Encode" />
+
+            <Button
+                android:id="@+id/btn_stop_live_show1"
+                style="@style/common_button"
+                android:text="Stop Live Show" />
+
+            <Button
+                android:id="@+id/btn_sound_on1"
+                style="@style/common_button"
+                android:text="Sound On" />
+
+            <Button
+                android:id="@+id/btn_sound_off1"
+                style="@style/common_button"
+                android:text="Sound Off" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <com.dji.sdk.sample.internal.utils.VideoFeedView
+                android:id="@+id/video_view_primary_video_feed1"
+                style="@style/main_camera_view"
+                android:layout_width="500dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp" />
+
+            <com.dji.sdk.sample.internal.utils.VideoFeedView
+                android:id="@+id/video_view_fpv_video_feed1"
+                style="@style/main_camera_view"
+                android:layout_marginTop="5dp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/edit_live_show_url_input1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/video_view_fpv_video_feed1"
+                android:inputType="textUri"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/btn_is_live_show_on1"
+                style="@style/common_button"
+                android:text="Is Live Show On" />
+
+            <Button
+                android:id="@+id/btn_show_info1"
+                style="@style/common_button"
+                android:text="Show Info" />
+
+            <Button
+                android:id="@+id/btn_show_live_start_time1"
+                style="@style/common_button"
+                android:text="Live Start Time" />
+
+            <Button
+                android:id="@+id/btn_show_current_video_source1"
+                style="@style/common_button"
+                android:text="Show Video Source" />
+
+            <Button
+                android:id="@+id/btn_change_video_source1"
+                style="@style/common_button"
+                android:text="Change Video Source" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
